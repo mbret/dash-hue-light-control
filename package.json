@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "node-dash-button": "0.6.1",
     "node-hue-api": "2.4.2",
     "yargs": "8.0.2"
   }
