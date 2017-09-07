@@ -44,8 +44,8 @@ Here is an example with pm2:
 Note that you will probably need to run this as sudo as well because of PcapSession
 
 ## Note about dash button
-Due to how the button is designed there is a noticeable timeout between a press and its action. I cannot do anything about
-that. This is a 2€ connected button after all.
+Due to how the button is designed (sleep, wake up, connect to wifi, arp, sleep, ...) there is a noticeable timeout between a press and its action. I cannot do anything about
+that and remember that this is a 2€ smart button after all.
 
 ## Next updates
 - control the color/intensity/whatever
