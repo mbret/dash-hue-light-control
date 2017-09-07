@@ -5,7 +5,7 @@ const configLoader = require('./lib/config-loader')
 
 // args check
 if (!argv.settings) {
-  console.log('Provide --settings arg')
+  console.log('Argument --settings is missing. Please provide --settings path to use this program. Exiting app...')
   process.exit()
 }
 
