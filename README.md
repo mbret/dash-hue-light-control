@@ -39,7 +39,9 @@ dedicated doc for more info.
 
 Here is an example with pm2:
 - `npm install pm2 -g`
-- `pm2 start /path/to/dash-hue-light-control/index.js --settings=/path/to/settings.json`
+- `pm2 start /path/to/dash-hue-light-control/index.js --name="my-dash-control" -- --settings=/path/to/settings.json`
+
+Note that you will probably need to run this as sudo as well because of PcapSession
 
 ## Next updates
 - control the color/intensity/whatever
