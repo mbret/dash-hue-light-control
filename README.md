@@ -10,8 +10,12 @@ support nodejs versions 7 and superiors.
  
  
 ## Prerequisite
-You need [nodejs](https://nodejs.org/en/) 7 or superior and Unix system. This program does not
-works on Window for now due to the use of libpcap.
+You need [nodejs](https://nodejs.org/en/) 7 or superior and a Unix system. This program does not
+works on Windows for now due to the use of libpcap. You will also need to setup your dash 
+and have an access token to your hue bridge. You can follow the step 2 from this guide to configure
+your dash [http://www.instructables.com/id/Amazon-Dash-Button-Hack](http://www.instructables.com/id/Amazon-Dash-Button-Hack).
+In order to have authorization to your bridge you will need to access its api and generate new user.
+Follow the official guide to help you in the process [https://developers.meethue.com/documentation/getting-started](https://developers.meethue.com/documentation/getting-started).
 
 ## Installation
 ``` sh
