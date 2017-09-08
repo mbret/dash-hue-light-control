@@ -7,6 +7,9 @@ support nodejs versions 7 and superiors.
  * [Prerequisite](https://github.com/mbret/dash-hue-light-control#prerequisite)
  * [Installation](https://github.com/mbret/dash-hue-light-control#installation)
  * [Usage](https://github.com/mbret/dash-hue-light-control#usage)
+ * [Run it as a background process](https://github.com/mbret/dash-hue-light-control#run-it-as-a-background-process)
+ * [Note about dash button](https://github.com/mbret/dash-hue-light-control#note-about-dash-button)
+ * [Next updates](https://github.com/mbret/dash-hue-light-control#next-updates)
  
  
 ## Prerequisite
