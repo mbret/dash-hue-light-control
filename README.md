@@ -1,23 +1,36 @@
 # dash-hue-light-control
-This module let you control your light with Amazon dash button.
+This program let you control your light with Amazon dash button. dash-hue-light-control
+support nodejs versions 7 and superiors.
 
 ## Contents
 
+ * [Prerequisite](https://github.com/mbret/dash-hue-light-control#prerequisite)
  * [Installation](https://github.com/mbret/dash-hue-light-control#installation)
+ * [Usage](https://github.com/mbret/dash-hue-light-control#usage)
  
-## Installation
-- `git clone https://github.com/mbret/dash-hue-light-control.git`
-- `cd dash-hue-light-control`
-- `npm install`
+ 
+## Prerequisite
+You need [nodejs](https://nodejs.org/en/) 7 or superior and Unix system. This program does not
+works on Window for now due to the use of libpcap.
 
-## How to run it
+## Installation
+``` sh
+# library needed for read requests from dash buttons
+$ sudo apt-get install libpcap-dev
+# actual program sources
+$ git clone https://github.com/mbret/dash-hue-light-control.git
+$ cd dash-hue-light-control
+$ npm install
+```
+
+## Usage
 Just create a `settings.json` somewhere. Then navigate to the module folder and run:
 
 `sudo node index --settings=path/to/settings.json`
 
 The process will keep watching for your dash press action and control the light.
 
-## settings.json sample
+### settings.json sample
 ```json
 {
   "jwt": "FkXIos6bRxzyy54qsspHLa2MGx5-IQkWNLfIbn4",
