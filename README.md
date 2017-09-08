@@ -1,7 +1,11 @@
 # dash-hue-light-control
 This module let you control your light with Amazon dash button.
 
-## How to install
+## Contents
+
+ * [Installation](https://github.com/mbret/dash-hue-light-control#installation)
+ 
+## Installation
 - `git clone https://github.com/mbret/dash-hue-light-control.git`
 - `cd dash-hue-light-control`
 - `npm install`
