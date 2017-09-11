@@ -25,15 +25,14 @@ Follow the official guide to help you in the process [https://developers.meethue
 # library needed for read requests from dash buttons
 $ sudo apt-get install libpcap-dev
 # actual program sources
-$ git clone https://github.com/mbret/dash-hue-light-control.git
-$ cd dash-hue-light-control
-$ npm install
+# You may need sudo to install the module
+$ npm install -g dash-hue-light-control
 ```
 
 ## Usage
 Just create a `settings.json` somewhere. Then navigate to the module folder and run:
 
-`sudo node index --settings=path/to/settings.json`
+`sudo dash-hue-light-control --settings=path/to/settings.json`
 
 The process will keep watching for your dash press action and control the light.
 
@@ -63,7 +62,7 @@ dedicated doc for more info.
 
 Here is an example with pm2:
 - `npm install pm2 -g`
-- `pm2 start /path/to/dash-hue-light-control/index.js --name="my-dash-control" -- --settings=/path/to/settings.json`
+- `pm2 start dash-hue-light-control --name="my-dash-control" -- --settings=/path/to/settings.json`
 
 Note that you will probably need to run this as sudo as well because of PcapSession
 
