@@ -30,7 +30,7 @@ $ npm install -g dash-hue-light-control
 ```
 
 ## Usage
-Just create a `settings.json` somewhere. Then navigate to the module folder and run:
+Just create a `settings.json` somewhere and use its location as argument:
 
 `sudo dash-hue-light-control --settings=path/to/settings.json`
 
