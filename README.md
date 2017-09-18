@@ -1,13 +1,13 @@
 # dash-hue-light-control
 This program let you control your light with Amazon dash button. dash-hue-light-control
 support nodejs versions 7 and superiors. With this module you will basically be able to set 
-a button that switch light or use the function directly programmatically and import it
-to your existing module.
+a button that switch light with command line interface (cli) or programmatically on importing the module
+to your existing program.
 
-To use this program you will need your dash button configured and ready and have access (ip + token)
-to your hue light. I'm writing a cli/module helper to get a convenient way to get this.
+To use this program you will need your dash button configured and ready plus have access (ip + token)
+to your hue light. I'm writing a cli/module helper to get a convenient way to have this.
 
-Please, feel free to send me any feedback or open issues on the github page.
+Please, feel free to send me any feedback or open issues on the module github page.
 
 ### Jeedom, Domoticz, etc
 If you want me to create a compatible plugin for domotics software just get in touch with me. It would be a pleasure
