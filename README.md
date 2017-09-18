@@ -74,8 +74,10 @@ run the command `sudo node index --settings=path/to/settings.json` through this 
 dedicated doc for more info.
 
 Here is an example with pm2:
-- `npm install pm2 -g`
-- `pm2 start dash-hue-light-control --name="my-dash-control" -- --settings=/path/to/settings.json`
+``` sh
+$ npm install pm2 -g
+$ sudo pm2 start dash-hue-light-control --name="hue-room" -- start ~/Documents/settings-hue-room.json
+```
 
 Note that you will probably need to run this as sudo as well because of PcapSession
 
