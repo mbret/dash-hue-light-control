@@ -8,9 +8,10 @@ support nodejs versions 7 and superiors.
  * [Installation](https://github.com/mbret/dash-hue-light-control#installation)
  * [Usage](https://github.com/mbret/dash-hue-light-control#usage)
  * [Run it as a background process](https://github.com/mbret/dash-hue-light-control#run-it-as-a-background-process)
+ * [Usage as a node module (programmatically)](https://github.com/mbret/usage-as-a-node-module-(programmatically))
  * [Note about dash button](https://github.com/mbret/dash-hue-light-control#note-about-dash-button)
  * [Next updates](https://github.com/mbret/dash-hue-light-control#next-updates)
- 
+
  
 ## Prerequisite
 You need [nodejs](https://nodejs.org/en/) 7 or superior and a Unix system. This program does not
@@ -65,6 +66,29 @@ Here is an example with pm2:
 - `pm2 start dash-hue-light-control --name="my-dash-control" -- --settings=/path/to/settings.json`
 
 Note that you will probably need to run this as sudo as well because of PcapSession
+
+## Usage as a node module (programmatically)
+You can import this program like any module and use it programmatically.
+For now the api is still rather light and will be improved over time.
+```javascript
+const DashHueLightControl = require('dash-hue-light-control')
+// you may pass some settings (ex: activate log, etc)
+const dashHueLightControl = DashHueLightControl({})
+
+try {
+  // start one watch
+  dashHueLightControl
+    .start({
+      "jwt": "FkXIos6bRxzyy54qsspHLa2MGx5-IQkWNLfIbn4",
+      "bridge": "192.168.0.10",
+      "dash": "b4:7c:9c:49:b4:d4",
+      "lightId": "2",
+      "mode": "toggle"
+    })
+} catch (e) {
+  console.error('Oops, the program has crashed!', e)
+}
+```
 
 ## Note about dash button
 Due to how the button is designed (sleep, wake up, connect to wifi, arp, sleep, ...) there is a noticeable timeout between a press and its action. I cannot do anything about

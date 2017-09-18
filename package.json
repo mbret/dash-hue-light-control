@@ -12,7 +12,7 @@
     "philips"
   ],
   "bin": {
-    "dash-hue-light-control": "index.js"
+    "dash-hue-light-control": "bin/index.js"
   },
   "main": "index.js",
   "scripts": {
