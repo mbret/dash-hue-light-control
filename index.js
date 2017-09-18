@@ -1,13 +1,18 @@
-#!/usr/bin/env node
-const argv = require('yargs').argv
+const Logger = require('./lib/logger')
 const watcher = require('./lib/watcher')
-const configLoader = require('./lib/config-loader')
 
-// args check
-if (!argv.settings) {
-  console.log('Argument --settings is missing. Please provide --settings path to use this program. Exiting app...')
-  process.exit()
+module.exports = (settings = {}) => {
+
+  let _logger = Logger({
+    activate: !!settings.log
+  })
+
+  const start = (settings) => {
+    return watcher(_logger, settings)
+  }
+
+  return {
+    _logger,
+    start
+  }
 }
-
-// run watcher
-watcher(configLoader.load(argv.settings))
