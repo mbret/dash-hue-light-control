@@ -3,14 +3,14 @@
   "bridge": "192.168.0.10",
   "configuration":[{
 		"dash": "b4:7c:9c:49:b4:d4",
-		"id": "2",
+		"id": "1",
 		"mode": "toggle",
 		"target": "group"
   },
 	{
 		"dash": "b4:7c:9c:49:b4:d4",
-		"id": "3",
+		"id": "1",
 		"mode": "toggle",
-		"target": "group"
+		"target": "light"
 	}]
 }
