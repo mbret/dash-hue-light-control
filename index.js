@@ -10,11 +10,5 @@ module.exports = (configuration = {}) => {
     activate: true
   })
 
-  const start = () => {
-    return watch()
-  }
-
-  return {
-    start
-  }
+  watch()
 }

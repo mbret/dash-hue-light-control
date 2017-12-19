@@ -50,6 +50,7 @@ $ sudo dash-hue-light-control start path/to/settings.json
 The process will keep watching for your dash press action and control the light.
 
 ### settings.json sample
+This is the most basic config example
 ```json
 {
   "jwt": "FkXIos6bRxzyy54qsspHLa2MGx5-IQkWNLfIbn4",
@@ -69,6 +70,21 @@ The available modes are:
 
 The toggle mode will either turn on or off your light depending on its current state.
 
+By default you will target a light but there are other possibilities like groups.
+```json
+{
+  "jwt": "FkXIos6bRxzyy54qsspHLa2MGx5-IQkWNLfIbn4",
+  "bridge": "192.168.0.10",
+  "configuration": {
+    "dash": "b4:7c:9c:49:b4:d4",
+    "targetId": "2",
+    "mode": "toggle",
+    "target": "group"
+  }
+}
+```
+Also configuration can take an array of entry to handle several dash buttons.
+
 ## Run it as a background process
 In the real world you probably want to run this program as a background process and let it run forever.
 An easy way to do it is to download [pm2](https://github.com/Unitech/pm2) or other process manager and
@@ -87,23 +103,16 @@ Note that you will probably need to run this as sudo as well because of PcapSess
 You can import this program like any module and use it programmatically.
 For now the api is still rather light and will be improved over time.
 ```javascript
-const DashHueLightControl = require('dash-hue-light-control')
-// you may pass some settings (ex: activate log, etc)
-const dashHueLightControl = DashHueLightControl({})
-
-try {
-  // start one watch
-  dashHueLightControl
-    .start({
-      "jwt": "FkXIos6bRxzyy54qsspHLa2MGx5-IQkWNLfIbn4",
-      "bridge": "192.168.0.10",
+const dashHueLightControl = require('dash-hue-light-control')
+dashHueLightControl({
+  "jwt": "FkXIos6bRxzyy54qsspHLa2MGx5-IQkWNLfIbn4",
+  "bridge": "192.168.0.10",
+  "configuration": {
       "dash": "b4:7c:9c:49:b4:d4",
-      "lightId": "2",
+      "targetId": "2",
       "mode": "toggle"
-    })
-} catch (e) {
-  console.error('Oops, the program has crashed!', e)
-}
+  }
+})
 ```
 
 ## Note about dash button
