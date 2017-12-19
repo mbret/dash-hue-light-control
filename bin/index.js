@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
+const logger = require('../lib/logger')
 const cli = require('../lib/cli')
 const {version} = require('../package.json')
-// we want to use main program api to ensure it always work depending the
-// context
-const dashHueLightControl = require('../index')({
-  log: true
+
+logger.init({
+  activate: true
 })
 
 // Run main program cli
-cli(dashHueLightControl, {version})
+cli({version})
 

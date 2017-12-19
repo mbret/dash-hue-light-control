@@ -1,18 +1,20 @@
-const Logger = require('./lib/logger')
-const watcher = require('./lib/watcher')
+const {watch} = require('./lib/watcher')
+const config = require('./lib/config')
+const logger = require('./lib/logger')
 
-module.exports = (settings = {}) => {
+module.exports = (configuration = {}) => {
 
-  let _logger = Logger({
-    activate: !!settings.log
+  config.init(configuration)
+
+  logger.init({
+    activate: true
   })
 
-  const start = (settings) => {
-    return watcher(_logger, settings)
+  const start = () => {
+    return watch()
   }
 
   return {
-    _logger,
     start
   }
 }
