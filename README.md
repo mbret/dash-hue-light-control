@@ -132,4 +132,4 @@ dig into the settings to see if I can avoid it.
 - Use local user file to allow cli session when using mac address, etc
 
 ## Contributors
-Jamie Briers
+[Jamie Briers](https://github.com/JamieBriers)
