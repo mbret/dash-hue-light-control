@@ -54,9 +54,11 @@ The process will keep watching for your dash press action and control the light.
 {
   "jwt": "FkXIos6bRxzyy54qsspHLa2MGx5-IQkWNLfIbn4",
   "bridge": "192.168.0.10",
-  "dash": "b4:7c:9c:49:b4:d4",
-  "lightId": "2",
-  "mode": "toggle"
+  "configuration": {
+    "dash": "b4:7c:9c:49:b4:d4",
+    "targetId": "2",
+    "mode": "toggle"
+  }
 }
 ```
 The available modes are:

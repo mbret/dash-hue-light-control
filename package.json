@@ -23,6 +23,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "commander": "^2.12.2",
     "node-dash-button": "0.6.1",
     "node-hue-api": "2.4.2",
     "winston": "^2.3.1"
