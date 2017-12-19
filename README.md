@@ -119,3 +119,6 @@ dig into the settings to see if I can avoid it.
 ## Next updates
 - control the color/intensity/whatever
 - Use local user file to allow cli session when using mac address, etc
+
+## Contributors
+Jamie Briers
